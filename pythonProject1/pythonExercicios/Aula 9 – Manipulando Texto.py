@@ -22,7 +22,7 @@ print(frase.find('android'))  # o res vai ser meno -1 significa nao encontrado o
 ''' 'Curso'in frase  # o (operador)==> in <==( vai perguntar se existe curso em frase) res ==> true '''
 # transformações categoria funcionlidade #
 print(frase.replace('python', 'android'))   # ''' ==> ( replace significa reposicionar ) entao o caso a onde estiver python ele vai substituir por android. '''
-print(frase.upper())   # ''' O comando  ==> upper  <== é um método e como todo metodo ele vai entre upper() ele serve para converter em ==> MAIUSCULAS '''
+print(frase.upper())   # O comando  ==> upper  <== é um método e como #btodo metodo ele vai entre upper() ele serve para converter em ==> MAIUSCULAS '''
 print(frase.lower())  # '''o comando ==>lower<== converte para minusculas ele também é um método '''
 print(frase.capitalize())  # ''' vai pasar todas as caracteristicas e para minusculas com essecao da primeira letra que continuara MAIUSCULAS'''
 print(frase.title())  # ''' vai capitalizar palavra por palavra ou seja a primeira letra da frasesempre MAIUSCULA '''
