@@ -1,0 +1,2 @@
+variavel1 = 'giovani'
+

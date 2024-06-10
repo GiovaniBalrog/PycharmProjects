@@ -1,0 +1,12 @@
+from pessoa import Pessoa
+p1 = Pessoa('Luiz', 29)
+p2 = Pessoa('João', 32)
+p3 = Pessoa('Giovani', 28)
+p3.comer('Arroz')
+p3.comer('Arroz')
+p3.falar('futbol')
+p3.parar_comer()
+p3.falar('sexo')
+print(p1.get_ano_nascimento())
+print(p2.get_ano_nascimento())
+print(p3.get_ano_nascimento())
