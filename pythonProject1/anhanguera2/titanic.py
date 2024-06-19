@@ -1,24 +1,25 @@
 import pandas as pd
 
-# Lê o arquivo Excel e armazena os dados em um DataFrame
+# Lê o arquivo CSV e armazena os dados em um DataFrame
 df = pd.read_csv(r"C:\Users\giova\OneDrive\Documentos\anhanguera\Programação orientada a objetos para dados\Aulas\exercicios_platicos\train.csv")
 
-'''
+# Exibe as colunas disponíveis no DataFrame
+print("Colunas disponíveis no DataFrame:", df.columns.tolist())
 
-colunas_desejadas = ["VALOR", "DESCRIÇAO", "SUBTOTAL"]  # Substitua com os nomes das colunas que você deseja
+# Colunas que estão presentes no arquivo CSV
+colunas_desejadas = ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex']
 
+# Verifica se as colunas desejadas estão presentes no DataFrame
+colunas_existentes = [coluna for coluna in colunas_desejadas if coluna in df.columns]
 
+# Seleciona apenas as colunas desejadas do DataFrame usando .loc
+df_selecionado = df.loc[:, colunas_existentes]
 
-# Seleciona apenas as colunas desejadas do DataFrame e cria uma cópia para evitar SettingWithCopyWarning
-df_selecionado = df[colunas_desejadas].copy()
+# Exibe o DataFrame com as colunas selecionadas
+print(df_selecionado)
 
-# Converte as colunas "VALOR" e "SUBTOTAL" para strings antes de formatá-las
-df_selecionado["VALOR"] = df_selecionado["VALOR"].astype(float).apply(lambda x: f"R$ {x:,.2f}")
-df_selecionado["SUBTOTAL"] = df_selecionado["SUBTOTAL"].astype(float).apply(lambda x: f"R$ {x:,.2f}")
-'''
+# ////// df.isna().sum() / df.shape[0] //////////////////////
 
-# Exibe o DataFrame com as colunas selecionadas e formatadas
-print(df)
-
-# convertendo os dados do arquivo csv para uma planilha
+# Convertendo os dados do DataFrame para uma planilha Excel
+df_selecionado.to_excel(r"C:\Users\giova\OneDrive\Documentos\anhanguera\Programação orientada a objetos para dados\Aulas\exercicios_platicos\train_selecionado.xlsx", index=False)
 
