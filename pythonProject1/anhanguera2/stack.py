@@ -32,13 +32,17 @@ class Stack:
 if __name__ == "__main__":
     stack = Stack()
 
-    stack.push(10)
-    stack.push(20)
-    stack.push(30)
+    stack.push('A')  # Adiciona 'A' ao topo da pilha
+    stack.push('B')  # Adiciona 'B' ao topo da pilha
+    stack.push('C')  # Adiciona 'C' ao topo da pilha
 
-    print(stack.pop())  # Deve imprimir 30
-    print(stack.peek())  # Deve imprimir 20
-    print(stack.pop())  # Deve imprimir 20
-    print(stack.is_empty())  # Deve imprimir False
-    print(stack.pop())  # Deve imprimir 10
-    print(stack.is_empty())  # Deve imprimir True
+    print('Elemento no topo:', stack.peek())  # Deve imprimir 'C'
+
+    print('Elemento removido:', stack.pop())  # Deve remover e imprimir 'C'
+    print('Elemento no topo:', stack.peek())  # Deve imprimir 'B'
+
+    print('Elemento removido:', stack.pop())  # Deve remover e imprimir 'B'
+    print('Elemento removido:', stack.pop())  # Deve remover e imprimir 'A'
+
+    print('Pilha vazia:', stack.is_empty())  # Deve imprimir True (pilha está vazia)
+
