@@ -1,9 +1,8 @@
-'''
+
 valores = ["leite", "café", "açúcar", "bolacha"]
 for c, v in enumerate(valores):
     print(f'na posição {c} encontrei o valor {v}!')
 print('cheguei ao final da lista')
-'''
 
 '''
 list = [32, 53, 85, 10, 15, 17, 19]
